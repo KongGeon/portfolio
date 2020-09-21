@@ -1,0 +1,1193 @@
+@charset "utf-8";
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: block;
+  width: 0;
+  height: 0;
+  text-indent: -9000px;
+  overflow: hidden;
+}
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/*레이아웃*/
+#header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #c6c6c6;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  height: 70px;
+}
+#banner {
+  margin-top: 70px;
+  position: relative;
+  width: 100%;
+}
+
+#contents {
+}
+
+#notice {
+  margin-top: 70px;
+}
+#footer {
+  margin-top: 70px;
+  border-top: 3px solid red;
+}
+/* 가운데 영역 */
+.container {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* 로우 영역 */
+.row {
+  padding: 0 28px;
+}
+
+/*헤더*/
+
+.logo {
+  background: url("imgs/Pictogram.png") no-repeat 0 -2px;
+  width: 192px;
+  height: 56px;
+  zoom: 0.5;
+}
+.header h1 {
+  margin: 17px;
+  float: left;
+  margin-top: 19px;
+}
+.search {
+  float: left;
+  margin: 13px 0 0 36px;
+  width: 260px;
+  height: 40px;
+  border: 1.5px solid red;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.header input {
+  float: left;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  padding: 0 0 0 13px;
+  border-style: hidden;
+}
+.header input::placeholder {
+  opacity: 0.5;
+}
+.search_btn {
+  background-color: #fff;
+  position: absolute;
+  margin: 10px -44px;
+}
+.search_btn .btn {
+  background: url("imgs/Pictogram.png") no-repeat -220px -10px;
+  width: 40px;
+  height: 40px;
+  zoom: 0.5;
+  cursor: pointer;
+}
+.search_popularity {
+  float: left;
+  margin: 25px 30px;
+  width: 100px;
+  height: 20px;
+  overflow: hidden;
+}
+.search_popularity span {
+  color: red;
+}
+
+.search_icons {
+  position: absolute;
+  margin-top: 14px;
+  display: none;
+}
+.search_icon {
+  background: url("imgs/Pictogram.png") no-repeat -284px -10px;
+  width: 40px;
+  height: 40px;
+  zoom: 0.5;
+}
+
+.menu {
+  float: right;
+}
+.menu div {
+  float: left;
+  padding: 12px 13px;
+  margin: 13px 5px;
+}
+.menu div h1 {
+  font-size: 13px;
+  font-weight: 500;
+}
+.menu .menu1 {
+  background-color: red;
+  border-radius: 5px;
+  border: solid 2px red;
+}
+.menu .menu1:hover {
+  background-color: #fff;
+  border: solid 2px red;
+  box-sizing: border-box;
+}
+.menu .menu1 {
+  color: #fff;
+}
+.menu .menu1:hover {
+  color: red;
+}
+.menu2:hover,
+.menu3:hover,
+.menu4:hover {
+  color: red;
+}
+.menu_icons {
+  float: right;
+  margin-top: -42px;
+  display: none;
+}
+.menu_icon {
+  background: url("imgs/Pictogram.png") no-repeat -360px -10px;
+  width: 42px;
+  height: 41px;
+  zoom: 0.5;
+}
+
+/* 배너  */
+.slider {
+  height: 450px;
+}
+
+.ss1 {
+  background: url(imgs/slider1.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.ss1 .container .text {
+  margin-top: 120px;
+  margin-left: 100px;
+}
+.ss1 .container .text h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 70px;
+}
+.ss1 .container .text h2 {
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 70px;
+}
+.ss1 .container .text h3 {
+  font-size: 37px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.ss2 {
+  background: url(imgs/slider2.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.ss2 .container .text {
+  margin-top: 120px;
+  margin-left: 100px;
+  color: #fff;
+}
+.ss2 .container .text h1 {
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 70px;
+}
+.ss2 .container .text h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: -1px;
+}
+.ss2 .container .text h2 span {
+  font-weight: 100;
+}
+.ss2 .container .text h3 {
+  font-size: 37px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.ss3 {
+  background: url(imgs/slider3.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* 픽토그램 */
+#pictogram {
+  width: 100%;
+  overflow: hidden;
+}
+
+.pictograms {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pictograms a {
+  float: left;
+
+  margin: 60px 30px;
+}
+.pictograms a h1 {
+  font-size: 15px;
+  margin-top: 15px;
+  text-align: center;
+  width: 90px;
+}
+.pictogram_btn1 {
+  background: url("imgs/Pictogram.png") no-repeat -6px -86px;
+  width: 134px;
+  height: 135px;
+  zoom: 0.5;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.pictogram_btn1:hover {
+  background: url("imgs/Pictogram.png") no-repeat -6px -235px;
+  width: 134px;
+  height: 135px;
+}
+
+.pictogram_btn2 {
+  background: url("imgs/Pictogram.png") no-repeat -150px -84px;
+  width: 138px;
+  height: 139px;
+  zoom: 0.5;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.pictogram_btn2:hover {
+  background: url("imgs/Pictogram.png") no-repeat -150px -233px;
+  width: 138px;
+  height: 139px;
+}
+.pictogram_btn3 {
+  background: url("imgs/Pictogram.png") no-repeat -304px -84px;
+  width: 112px;
+  height: 139px;
+  zoom: 0.5;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.pictogram_btn3:hover {
+  background: url("imgs/Pictogram.png") no-repeat -304px -233px;
+  width: 112px;
+  height: 139px;
+}
+.pictogram_btn4 {
+  background: url("imgs/Pictogram.png") no-repeat -430px -86px;
+  width: 136px;
+  height: 137px;
+  zoom: 0.5;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.pictogram_btn4:hover {
+  background: url("imgs/Pictogram.png") no-repeat -430px -235px;
+  width: 136px;
+  height: 137px;
+}
+.pictogram_btn5 {
+  background: url("imgs/Pictogram.png") no-repeat -584px -88px;
+  width: 144px;
+  height: 133px;
+  zoom: 0.5;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.pictogram_btn5:hover {
+  background: url("imgs/Pictogram.png") no-repeat -584px -237px;
+  width: 144px;
+  height: 133px;
+}
+.pictogram_btn6 {
+  background: url("imgs/Pictogram.png") no-repeat -746px -86px;
+  width: 112px;
+  height: 135px;
+  zoom: 0.5;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.pictogram_btn6:hover {
+  background: url("imgs/Pictogram.png") no-repeat -746px -235px;
+  width: 112px;
+  height: 135px;
+}
+.pictogram_btn7 {
+  background: url("imgs/Pictogram.png") no-repeat -872px -88px;
+  width: 126px;
+  height: 129px;
+  zoom: 0.5;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.pictogram_btn7:hover {
+  background: url("imgs/Pictogram.png") no-repeat -872px -237px;
+  width: 126px;
+  height: 129px;
+}
+
+/* 컨텐츠 */
+.content_name {
+  font-size: 20px;
+  font-weight: 900;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.contents_btn {
+  float: right;
+}
+.contents_btn_left {
+  background: url("imgs/Pictogram.png") no-repeat -24px -392px;
+  width: 48px;
+  height: 49px;
+  zoom: 0.5;
+  float: left;
+  cursor: pointer;
+}
+.contents_btn_right {
+  background: url("imgs/Pictogram.png") no-repeat -82px -392px;
+  width: 48px;
+  height: 49px;
+  zoom: 0.5;
+  float: left;
+  cursor: pointer;
+}
+.recommended_service {
+  float: left;
+  margin: 0;
+  width: 18.7%;
+  padding-right: 1.6%;
+  position: relative;
+}
+
+.photo {
+  width: 100%;
+
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.photo img {
+  transition: all 0.3s linear;
+  display: block;
+}
+.photo img:hover {
+  transform: scale(1.2);
+}
+.empty_heart {
+  background: url("imgs/Pictogram.png") no-repeat -158px -386px;
+  width: 60px;
+  height: 55px;
+  zoom: 0.5;
+  position: absolute;
+  z-index: 99;
+  top: 15px;
+  right: 55px;
+  cursor: pointer;
+}
+
+.full_heart {
+  background: url("imgs/Pictogram.png") no-repeat -300px -386px;
+  width: 60px;
+  height: 55px;
+  zoom: 0.5;
+  position: absolute;
+  z-index: 99;
+  top: 15px;
+  right: 55px;
+  cursor: pointer;
+}
+.eh1 {
+  right: 15px;
+}
+.seller {
+  font-size: 12px;
+  color: #999999;
+  margin-top: 20px;
+}
+.service_name {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 900;
+}
+.star {
+  float: left;
+  background: url("imgs/Pictogram.png") no-repeat -375px -387px;
+  width: 24px;
+  height: 22px;
+  zoom: 0.5;
+  margin: 7px 3px 0 0;
+}
+.star_number {
+  float: left;
+  font-size: 12px;
+  color: #999999;
+}
+.line {
+  display: block;
+  height: 13px;
+  width: 1px;
+  float: left;
+  margin: 3px 7px;
+  background: #999999;
+}
+.review {
+  float: left;
+  font-size: 12px;
+  color: #999999;
+}
+.price {
+  float: right;
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: -5px;
+}
+
+.service_line2 {
+  margin-top: 40px;
+}
+
+/* 컨텐츠 2~4 */
+.contents2,
+.contents3,
+.contents4 {
+  margin-top: 60px;
+}
+
+.popularity {
+  float: left;
+  margin: 0;
+  width: 18.7%;
+  padding-right: 1.6%;
+  position: relative;
+}
+
+.sincerity {
+  float: left;
+  margin: 0;
+  width: 18.7%;
+  padding-right: 1.6%;
+  position: relative;
+}
+.new {
+  float: left;
+  margin: 0;
+  width: 18.7%;
+  padding-right: 1.6%;
+  position: relative;
+}
+.s5 {
+  padding-right: 0;
+}
+
+/* 공지사항 & 리뷰 */
+.notice {
+  float: left;
+  width: 57.6%;
+  margin-right: 2%;
+}
+.notice1 {
+}
+.notice1 img {
+  display: block;
+}
+.notice2 {
+}
+.notice2 img {
+  display: block;
+}
+.notise360 {
+  display: none;
+}
+.reviewbar {
+  float: right;
+  width: 40.4%;
+  overflow: hidden;
+}
+.reviewbarbox_all {
+}
+.reviewbarbox {
+}
+.reviewbarbox_box {
+  overflow: hidden;
+}
+.reviewbar_namebar {
+}
+.reviewbar_name {
+  font-size: 20px;
+  font-weight: 900;
+
+  margin-bottom: 20px;
+}
+.reviewbar_bar {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: #fff 1px solid;
+}
+.reviewbar_bar:hover {
+  border: red 1px solid;
+}
+.buyer {
+  float: left;
+  margin-right: 5px;
+  color: #999999;
+}
+.five_star {
+  float: left;
+}
+.fs {
+  margin: 7px 0 0 0;
+}
+.review_contents {
+  clear: both;
+}
+.review_content {
+}
+
+/*푸터*/
+
+.footer_menu {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px #dddddd;
+}
+
+.footer_menu h1 {
+  padding: 20px 13px;
+  position: relative;
+  font-weight: 500;
+}
+.footer_menu h1::after {
+  content: "";
+  border-right: 1px solid #999999;
+  width: 1px;
+  height: 16px;
+  margin: 13px;
+  display: block;
+  position: absolute;
+  right: -15px;
+  top: 12px;
+}
+.footer_content1_1 {
+  display: none;
+}
+.arrow {
+  display: none;
+}
+.footer_content1_2 {
+  display: none;
+}
+.footer_menu h1:last-child::after {
+  display: none;
+}
+.footer_img {
+  background: url("imgs/Pictogram.png") no-repeat -36px -614px;
+  width: 302px;
+  height: 328px;
+  zoom: 0.5;
+  float: left;
+  margin: 40px 0;
+}
+
+.footer_contents {
+  float: left;
+  margin: 34px 0 34px 33px;
+}
+.footer_content1 {
+  margin-bottom: 10px;
+}
+.footer_content1 h1 {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+.footer_content2 {
+}
+.footer_content2 h1 {
+  font-size: 11px;
+}
+.icon {
+  float: right;
+  margin: 35px 0;
+}
+.google_play {
+  zoom: 0.5;
+  margin-bottom: 10px;
+}
+.app_store {
+  zoom: 0.5;
+}
+
+/* 하단 고정바 */
+
+.bottom_fixing {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  z-index: 99;
+}
+.bottom_pictograms {
+  margin: 8px 6%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bottom_pictograms div:nth-child(4) {
+  margin-top: 1px;
+}
+.bottom_pictograms div:nth-child(4) h1 {
+  margin-top: 1px;
+}
+.bottom_pictograms div:nth-child(4) > a > div {
+  position: relative;
+}
+.new_message {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  border-radius: 10px;
+}
+.bottom_pictograms div:nth-child(5) {
+  margin-top: -2px;
+}
+
+.bottom_pictograms div {
+  display: block;
+  margin: 0 auto;
+}
+.bottom_pictograms a > div {
+}
+.bottom_pictograms div div div {
+  display: block;
+}
+.bottom_pictogram1 {
+  background: url("imgs/Pictogram.png") no-repeat -166px -480px;
+  width: 42px;
+  height: 40px;
+  zoom: 0.5;
+}
+.bottom_pictogram2 {
+  background: url("imgs/Pictogram.png") no-repeat -236px -480px;
+  width: 40px;
+  height: 40px;
+  zoom: 0.5;
+}
+.bottom_pictogram3 {
+  background: url("imgs/Pictogram.png") no-repeat -300px -480px;
+  width: 46px;
+  height: 40px;
+  zoom: 0.5;
+}
+.bottom_pictogram4 {
+  background: url("imgs/Pictogram.png") no-repeat -364px -482px;
+  width: 54px;
+  height: 36px;
+  zoom: 0.5;
+}
+.bottom_pictogram5 {
+  background: url("imgs/Pictogram.png") no-repeat -442px -476px;
+  width: 36px;
+  height: 46px;
+  zoom: 0.5;
+}
+.bottom_pictograms div div h1 {
+  font-size: 10px;
+  text-align: center;
+  color: #999999;
+}
+.bottom_pictograms div:first-child div h1 {
+  color: red;
+}
+
+/* 상단 이동바 */
+
+#top {
+  position: fixed;
+  right: 150px;
+  bottom: 60px;
+  z-index: 999;
+}
+
+.top_btn {
+  background: url("imgs/Pictogram.png") no-repeat -18px -472px;
+  width: 106px;
+  height: 107px;
+  zoom: 0.5;
+  display: none;
+}
+/* 스크롤 애니메이션 */
+.contents2,
+.contents3,
+.contents4,
+.notice_main {
+  transition: all 0.6s ease-in-out;
+}
+.contents2 {
+  opacity: 0;
+  transform: translate(0, 20%);
+}
+.contents3 {
+  opacity: 0;
+  transform: translate(0, 20%);
+}
+.contents4 {
+  opacity: 0;
+  transform: translate(0, 20%);
+}
+.notice_main {
+  opacity: 0;
+  transform: translate(0, 20%);
+}
+
+.show {
+  opacity: 1;
+  transform: none;
+}
+/* 미디어 쿼리 */
+@media (max-width: 1290px) {
+  .container {
+    width: 100%;
+  }
+
+  #footer .container {
+    zoom: 0.8;
+  }
+}
+
+@media (max-width: 1024px) {
+  .search_popularity {
+    display: none;
+  }
+  .menu div {
+    padding: 14px 10px;
+  }
+  .slider {
+    height: 350px;
+  }
+  .ss1 {
+    background-position-x: -450px;
+  }
+  .ss1 .container .text {
+    margin-top: 80px;
+    margin-left: 50px;
+  }
+  .ss1 .container .text h1 {
+    font-size: 50px;
+
+    line-height: 60px;
+  }
+  .ss1 .container .text h2 {
+    font-size: 50px;
+
+    line-height: 60px;
+  }
+  .ss1 .container .text h3 {
+    font-size: 27px;
+
+    margin-top: 25px;
+  }
+  .ss2 {
+    background-position-x: -450px;
+  }
+  .ss2 .container .text {
+    margin-top: 80px;
+    margin-left: 50px;
+  }
+  .ss2 .container .text h1 {
+    font-size: 50px;
+
+    line-height: 60px;
+  }
+  .ss2 .container .text h2 {
+    font-size: 50px;
+
+    line-height: 60px;
+  }
+  .ss2 .container .text h3 {
+    font-size: 27px;
+
+    margin-top: 25px;
+  }
+  .pictograms a {
+    margin: 40px 15px;
+  }
+  .pictograms a div {
+    zoom: 0.3;
+  }
+  .pictograms a h1 {
+    margin-top: 10px;
+    width: 85px;
+  }
+
+  .photo {
+    background-color: #000;
+    border-radius: 10px;
+  }
+  .line {
+    display: none;
+  }
+  .star_number {
+    float: none;
+  }
+  #footer .container {
+    zoom: 0.6;
+  }
+  .footer_img {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+}
+@media (max-width: 820px) {
+  #banner {
+    margin-top: 50px;
+  }
+  #header {
+    height: 50px;
+  }
+  .menu div {
+    display: none;
+  }
+  .header h1 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 12px;
+  }
+  .logo {
+    display: block;
+    margin: 0px auto;
+  }
+  .search {
+    display: none;
+  }
+  .search_icons {
+    display: block;
+    cursor: pointer;
+  }
+  .row {
+    padding: 0 16px;
+  }
+  .menu_icons {
+    display: block;
+    cursor: pointer;
+  }
+
+  .pictograms a {
+    margin: 20px 3px;
+  }
+  .contents2,
+  .contents3,
+  .contents4 {
+    margin-top: 25px;
+  }
+  .content_name {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .slider {
+    height: 130px;
+  }
+  .ss1 {
+    background-position-x: -100px;
+  }
+  .ss1 .container .text {
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+  .ss1 .container .text h1 {
+    font-size: 25px;
+
+    line-height: 30px;
+  }
+  .ss1 .container .text h2 {
+    font-size: 25px;
+
+    line-height: 30px;
+  }
+  .ss1 .container .text h3 {
+    display: none;
+  }
+  .ss2 {
+    background-position-x: -100px;
+  }
+  .ss2 .container .text {
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+  .ss2 .container .text h1 {
+    font-size: 25px;
+
+    line-height: 30px;
+  }
+  .ss2 .container .text h2 {
+    font-size: 25px;
+
+    line-height: 30px;
+  }
+  .ss2 .container .text h3 {
+    display: none;
+  }
+
+  .pictograms a h1 {
+    margin-top: 5px;
+    font-size: 9px;
+    width: 70px;
+  }
+  .pictograms a {
+    margin: 13px 1px 10px 1px;
+  }
+
+  .contents_btn {
+    display: none;
+  }
+  .recommended_service {
+    float: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .popularity {
+    float: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .sincerity {
+    float: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .new {
+    float: none;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .photo {
+    width: 36.5%;
+    float: left;
+  }
+  .service_name {
+    margin-top: 0;
+  }
+  .explanation {
+    float: left;
+    margin-left: 3%;
+    width: 60.5%;
+    height: 100%;
+  }
+  .seller {
+    display: none;
+  }
+  .review_bar {
+    float: right;
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+  }
+  .star_number {
+    float: left;
+  }
+  .line {
+    display: block;
+  }
+  .price {
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+  }
+  .empty_heart {
+    left: 38.5%;
+    top: auto;
+    bottom: 0;
+  }
+  .service_line2 {
+    margin-top: 0;
+  }
+  .notice {
+    width: 100%;
+    margin-right: 0;
+  }
+  #notice {
+    margin: 25px 0;
+  }
+  #notice div .row {
+    padding: 0;
+  }
+
+  .notice1,
+  .notice2 {
+    display: none;
+  }
+  .notise360 {
+    display: block;
+    position: relative;
+    top: 0;
+  }
+  .reviewbar {
+    display: none;
+  }
+  #footer {
+    margin-top: 30px;
+  }
+  #footer .container {
+    zoom: 1;
+  }
+  .footer_contents {
+    float: none;
+    margin: 20px 0;
+  }
+  .footer_menu h1 {
+    font-size: 12px;
+    padding: 20px 8px;
+  }
+  .footer_menu h1::after {
+    top: 8px;
+  }
+  .footer_menu h1:last-child {
+    display: none;
+  }
+  .footer_menu h1:nth-child(4)::after {
+    display: none;
+  }
+  .footer_content1_1 {
+    display: flex;
+    justify-content: center;
+  }
+  .footer_content1_2 {
+  }
+  .footer_content1_1 h1 {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    float: left;
+  }
+  .arrow {
+    margin: 10px 0 0 10px;
+    display: block;
+    float: left;
+    background: url("imgs/Pictogram.png") no-repeat -174px -546px;
+    width: 24px;
+    height: 12px;
+    zoom: 0.5;
+    cursor: pointer;
+    transform: rotate(0deg);
+  }
+  .footer_content1_2 h1 {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+  }
+  .footer_content1 {
+    display: none;
+  }
+  .footer_content2 {
+    margin-top: 15px;
+  }
+  .footer_content2 h1 {
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .icon {
+    width: 100%;
+    margin: 0 0 70px 0;
+  }
+  .icon a {
+    width: 47.6%;
+    float: left;
+    position: relative;
+  }
+  .icon a:first-child {
+    margin-right: 4.8%;
+  }
+  .icon a div img {
+    width: 100%;
+  }
+  .bottom_fixing {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-pagination,
+  swiper-button-prev,
+  .swiper-button-next,
+  .swiper-scrollbar,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .pictograms a div {
+    zoom: 0.2;
+  }
+  .pictograms a h1 {
+    margin-top: 5px;
+    font-size: 9px;
+    width: 50px;
+  }
+  .pictograms a {
+    margin: 10px 1px;
+  }
+}
+
+@media (max-width: 320px) {
+  .pictograms a div {
+    zoom: 0.18;
+  }
+  .pictograms a h1 {
+    width: 43px;
+  }
+
+  .footer_menu h1 {
+    font-size: 10px;
+    padding: 12px 8px;
+  }
+  .footer_menu h1::after {
+    top: -1px;
+  }
+}
